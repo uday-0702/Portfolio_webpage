@@ -1,30 +1,54 @@
-import Link from "next/link";
+import { Mail, Phone, Linkedin, Github, MapPin } from "lucide-react";
 
 export default function ContactInfo() {
-    return (
-      <div id="contact" className="max-w-2xl mx-auto shadow-md rounded-2xl p-6 bg-white border border-gray-200">
-        <h2 className="text-3xl font-bold text-center mb-6">Contact Me</h2>
-        <div className="space-y-4 text-center">
-          <p className="text-lg font-medium">Feel free to reach out to me through the following methods:</p>
-          <div className="flex flex-col items-center space-y-3">
-            <p className="text-gray-700">
-              <strong>Email:</strong> udaymathur0702@gmail.com
-            </p>
-            <p className="text-gray-700">
-              <strong>Phone:</strong> +91 9636266457
-            </p>
-            <p className="text-gray-700">
-              <strong>LinkedIn:</strong> <Link target="_blank" href="https://www.linkedin.com/in/uday-mathur0702/" className="text-blue-600 hover:underline">linkedin.com/in/uday-mathur0702/</Link>
-            </p>
-            <p className="text-gray-700">
-              <strong>GitHub:</strong> <Link target="_blank" href="https://github.com/uday-0702" className="text-blue-600 hover:underline">github.com/uday-0702</Link>
-            </p>
-            <p className="text-gray-700">
-              <strong>Location:</strong> Varanasi, Uttar Pradesh, India
-            </p>
-          </div>
+  return (
+    <div
+      id="contact"
+      className="max-w-2xl mx-auto  rounded-2xl p-8 bg-white text-center"
+    >
+      <h2 className="text-4xl font-bold mb-8 text-gray-900">Contact Me</h2>
+      <p className="text-lg text-gray-600 mb-6">
+        Feel free to reach out through the following channels:
+      </p>
+      <div className="flex flex-col items-center space-y-6">
+        <div className="flex space-x-6">
+          <a
+            href="mailto:udaymathur0702@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-800 hover:text-blue-600 transition-colors"
+          >
+            <Mail className="w-12 h-12 text-black -600" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/uday-mathur0702/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-800 hover:text-blue-600 transition-colors"
+          >
+            <Linkedin className="w-12 h-12 text-black " />
+          </a>
+          <a
+            href="https://github.com/uday-0702"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-800 hover:text-blue-600 transition-colors"
+          >
+            <Github className="w-12 h-12 text-black" />
+          </a>
+        <a
+          href="tel:+919636266457"
+          className="flex items-center space-x-4 text-gray-800 hover:text-blue-600 transition-colors"
+        >
+          <Phone className="w-8 h-8 fill-black" />
+          {/* <span className="text-xl font-medium">+91 9636266457</span> */}
+        </a>
+        </div>
+        <div className="flex items-center space-x-4 text-gray-800">
+          <MapPin className="w-8 h-8 text-black" />
+          <span className="text-xl font-medium">Varanasi, Uttar Pradesh, India</span>
         </div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}

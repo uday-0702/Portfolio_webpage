@@ -18,7 +18,7 @@ const Navigation = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const navList = ['projects', 'experience', 'contact']
+  const navList = ['about me', 'projects', 'experience', 'contact']
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
